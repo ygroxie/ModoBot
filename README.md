@@ -1,1 +1,2 @@
-# ModoBot
+# Ygroxbot
+Premier bot d'Ygroxie

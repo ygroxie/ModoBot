@@ -100,6 +100,7 @@ if (command === "ban") {
     }).catch(console.error)
 }})
 
+
 const setupCMD = "!verif"
 let initialMessage = `**Salut ! 
 Désolé pour le dérangement mais il va falloir que tu réagisses avec le :white_check_mark: pour pouvoir voir le reste des salons ! **`;
@@ -153,7 +154,8 @@ bot.on('raw', event => {
                     memberObj.addRole(roleObj)
                     memberObj.removeRole(name, "Visiteur")
                 } else {
-                    memberObj.removeRole(roleObj);
+                    memberObj.removeRole(roleObj)
+                    memberObj.addrole(name, "Visiteur");
                 }
             }
         }

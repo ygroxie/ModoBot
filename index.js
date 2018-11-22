@@ -113,7 +113,7 @@ if (roles.length !== reactions.length) throw "Roles list and reactions list are 
 function generateMessages(){
     var messages = [];
     messages.push(initialMessage);
-    for (let role of roles) messages.push(`:white_check_mark: `); //DONT CHANGE THIS
+    for (let role of roles) messages.push(`:white_check_mark: {role} `); //DONT CHANGE THIS
     return messages;
 }
 
@@ -151,6 +151,7 @@ bot.on('raw', event => {
                 
                 if (event.t === "MESSAGE_REACTION_ADD"){
                     memberObj.addRole(roleObj)
+                    memberObj.removeRole(name, "Visiteur")
                 } else {
                     memberObj.removeRole(roleObj);
                 }

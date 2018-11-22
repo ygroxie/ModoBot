@@ -100,7 +100,7 @@ if (command === "ban") {
     }).catch(console.error)
 }})
 
-const setupCMD = "?!Vérification"
+const setupCMD = "!verif"
 let initialMessage = `**Salut ! 
 Désolé pour le dérangement mais il va falloir que tu réagisses avec le :white_check_mark: pour pouvoir voir le reste des salons ! **`;
 const roles = ["Joueur"];

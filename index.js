@@ -107,8 +107,8 @@ if (command === "ban") {
 
 const setupCMD = "!createrolemessage"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
-const roles = ["Hacker", "Artist", "Public Relations", "Intern"];
-const reactions = ["💻", "🖌", "😃", "🆕"];
+const roles = ["Joueur"];
+const reactions = ["💻"];
 
 //If there isn't a reaction for every role, scold the user!
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";

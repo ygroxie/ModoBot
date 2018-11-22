@@ -102,7 +102,7 @@ if (command === "ban") {
 
 bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === ":tada:")
-    reaction.message.guild.member(user).addRole('Joueur')
+    reaction.message.guild.member(user).addRole('Joueur').catch(console.error)
 })
 
 

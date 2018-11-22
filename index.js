@@ -100,13 +100,9 @@ if (command === "ban") {
     }).catch(console.error)
 }})
 
-//bot.on('messageReactionAdd', (reaction, user) => {
-  //  if(reaction.emoji.name === "🎉")
-    //reaction.message.guild.member(user).addRole('Joueur').catch(console.error)
-//})
-
-const setupCMD = "!createrolemessage"
-let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
+const setupCMD = "?!Vérification"
+let initialMessage = `**Salut ! 
+Désolé pour le dérangement mais il va falloir que tu réagisses avec le :white_check_mark: pour pouvoir voir le reste des salons ! **`;
 const roles = ["Joueur"];
 const reactions = ["💻"];
 
@@ -117,7 +113,7 @@ if (roles.length !== reactions.length) throw "Roles list and reactions list are 
 function generateMessages(){
     var messages = [];
     messages.push(initialMessage);
-    for (let role of roles) messages.push(`React below to get the **"${role}"** role!`); //DONT CHANGE THIS
+    for (let role of roles) messages.push(`:white_check_mark: `); //DONT CHANGE THIS
     return messages;
 }
 
